@@ -19,3 +19,6 @@ class CervejaService:
         )
 
         return self.cerveja_repository.save_obj(db_cerveja)
+
+    def delete_cerveja(self, cerveja_id: int):
+        return self.cerveja_repository.delete_cerveja(cerveja_id)

@@ -20,3 +20,9 @@ def read_cervejas():
 def create_cerveja(cerveja: cerveja_schema.CervejaCreate):
     cerveja = cerveja_service.create_cerveja(cerveja)
     return cerveja
+
+
+@router.delete("/cerveja/{cerveja_id}", status_code=201, tags=["cervejas"])
+def delete_cerveja(cerveja_id: int):
+    cerveja = cerveja_service.delete_cerveja(cerveja_id)
+    return cerveja
