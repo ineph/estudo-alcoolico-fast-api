@@ -1,4 +1,5 @@
 from sqlalchemy import Column, Integer, String, Numeric
+
 from server.config.database import Base
 
 

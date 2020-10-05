@@ -2,6 +2,8 @@ from typing import Optional
 
 from fastapi import FastAPI
 
+from server.repositories.cerveja_repository import CervejaRepository
+
 app = FastAPI()
 
 
@@ -13,3 +15,9 @@ def read_root():
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: Optional[str] = None):
     return {"item_id": item_id, "q": q}
+
+
+@app.get("/cervejas")
+def read_cervejas():
+    db_cervejas = CervejaRepository().get_cervejas
+    return db_cervejas
