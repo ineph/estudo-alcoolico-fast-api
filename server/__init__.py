@@ -1,3 +1,3 @@
 from server.config.database import SessionLocal
 
-db = SessionLocal
+db_session = SessionLocal()

@@ -11,5 +11,8 @@ class CervejaCreate(CervejaBase):
     pass
 
 
-class Cerveja(BaseModel):
+class Cerveja(CervejaBase):
     id: int
+
+    class Config:
+        orm_mode = True
