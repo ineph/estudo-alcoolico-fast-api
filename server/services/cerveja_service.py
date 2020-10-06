@@ -22,3 +22,6 @@ class CervejaService:
 
     def delete_cerveja(self, cerveja_id: int):
         return self.cerveja_repository.delete_cerveja(cerveja_id)
+
+    def get_cerveja_by_id(self, cerveja_id: int):
+        return self.cerveja_repository.get_cerveja_by_id(cerveja_id)

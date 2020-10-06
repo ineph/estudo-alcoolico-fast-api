@@ -17,6 +17,12 @@ def read_cervejas():
     return cervejas
 
 
+@router.get("/cerveja/{cerveja_id}", response_model=cerveja_schema.Cerveja, tags=["cervejas"])
+def get_cerveja_by_id(cerveja_id):
+    cerveja = cerveja_service.get_cerveja_by_id(cerveja_id)
+    return cerveja
+
+
 @router.post("/cervejas", response_model=cerveja_schema.Cerveja, tags=["cervejas"])
 def create_cerveja(cerveja: cerveja_schema.CervejaCreate):
     cerveja = cerveja_service.create_cerveja(cerveja)
