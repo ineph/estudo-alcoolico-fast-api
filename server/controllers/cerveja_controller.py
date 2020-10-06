@@ -4,6 +4,7 @@ from fastapi import APIRouter
 
 from server.schemas import cerveja_schema
 from server.services.cerveja_service import CervejaService
+from fastapi import HTTPException
 
 router = APIRouter()
 

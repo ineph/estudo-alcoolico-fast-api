@@ -10,4 +10,5 @@ class CervejaRepository(BaseRepository):
     def delete_cerveja(self, cerveja_id):
         self.db.query(cerveja.Cerveja).filter(cerveja.Cerveja.id == cerveja_id).delete()
         self.db.commit()
-        # return to_delete.delete()
+
+
